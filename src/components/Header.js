@@ -5,7 +5,7 @@ import { socialMedia } from '../stub_data/social_media';
 
 const Header = () => {
   return (
-    <div className='flex flex-col md:flex-row items-start md:items-center justify-between p-10 w-screen'>
+    <div className='flex flex-col md:flex-row items-start md:items-center justify-between py-10 px-10 md:px-20 w-full md:w-screen'>
       <a
         href='#'
         className='font-sans font-extrabold text-[1.5rem] md:text-[3rem]'
