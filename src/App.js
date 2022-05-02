@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from './components/Header';
 
 const App = () => {
   return (
-    <div className='flex flex-1 items-center justify-center'>Scovia Uwase</div>
+    <>
+      <Header />
+    </>
   );
 };
 
