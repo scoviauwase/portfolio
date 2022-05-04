@@ -5,7 +5,7 @@ import Profile from '../assets/images/profile.png';
 
 const Landing = () => {
   return (
-    <div className='flex flex-col md:flex-row md:justify-between md:items-start py-10 px-10 md:px-20'>
+    <div className='flex flex-col px-10 py-10 md:flex-row md:justify-between md:items-start md:px-20'>
       <div className='w-full md:w-[26%] min-h-full md:min-h-[70vh]'>
         <img src={Profile} className='w-full h-full' />
       </div>
