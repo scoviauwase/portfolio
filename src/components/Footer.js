@@ -12,7 +12,7 @@ const Footer = () => {
           .filter((media) => media.type === 'light')
           .map((media) => (
             <li key={media.id} className='mr-3'>
-              <a href={media.url}>
+              <a href={media.url} target='_blank'>
                 <img src={media.src} alt={media.id} />
               </a>
             </li>

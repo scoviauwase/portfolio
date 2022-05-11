@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className='flex flex-col items-start justify-between w-full px-10 py-10 md:flex-row md:items-center md:px-20'>
       <a
-        href='#'
+        href='/'
         className='font-sans font-extrabold text-[1.5rem] md:text-[3rem]'
       >
         Scovia Uwase
@@ -17,7 +17,7 @@ const Header = () => {
           .filter((media) => media.type === 'dark')
           .map((media) => (
             <li key={media.id} className='mr-3'>
-              <a href={media.url}>
+              <a href={media.url} target='_blank'>
                 <img src={media.src} alt={media.id} />
               </a>
             </li>
