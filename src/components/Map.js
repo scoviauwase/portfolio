@@ -1,6 +1,8 @@
 import React from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
+import ThemeContext from '../context/theme';
+
 const containerStyle = {
   width: '60vw',
   height: '60vh',
@@ -27,17 +29,33 @@ const CurrentLocation = () => {
 
 const MapView = () => {
   return (
-    <div className='flex flex-col items-center justify-center border-t-2 border-black w-[60%] mx-auto'>
-      <span className='font-sans italic font-medium text-[1.5rem] text-center my-5'>
-        Currently residing in
-      </span>
-      <span className='font-sans italic font-bold text-[2rem] text-center mb-5'>
-        Gasabo, Kigali, Rwanda
-      </span>
-      <div className='w-full min-h-[60vh] my-10'>
-        <CurrentLocation />
-      </div>
-    </div>
+    <ThemeContext.Consumer>
+      {({ isDark }) => (
+        <div
+          className={`${
+            isDark
+              ? 'border-white bg-[#121212] text-white'
+              : 'border-black bg-white'
+          }`}
+        >
+          <div
+            className={`flex flex-col items-center justify-center border-t-2 ${
+              isDark ? 'border-white' : 'border-black'
+            }  w-[60%] mx-auto`}
+          >
+            <span className='font-sans italic font-medium text-[1.5rem] text-center my-5'>
+              Currently residing in
+            </span>
+            <span className='font-sans italic font-bold text-[2rem] text-center mb-5'>
+              Gasabo, Kigali, Rwanda
+            </span>
+            <div className='w-full min-h-[60vh] my-10'>
+              <CurrentLocation />
+            </div>
+          </div>
+        </div>
+      )}
+    </ThemeContext.Consumer>
   );
 };
 
